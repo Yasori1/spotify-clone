@@ -26,7 +26,7 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
         `
         h-fit
         bg-gradient-to-b
-        from-orange-500
+        from-purple-500
         p-6
       `,
         className
@@ -123,7 +123,7 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
                 className="
                 
                 text-black
-                bg-emerald-50
+                bg-emerald-600
                 px-6
                 py-2
               "
@@ -135,7 +135,7 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
               <Button
                 onClick={() => {}}
                 className="
-                bg-emerald-800            
+                bg-emerald-600            
                 text-black
                 px-6
                 py-2
