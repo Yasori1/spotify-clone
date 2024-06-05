@@ -121,10 +121,11 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
               <Button
                 onClick={() => {}}
                 className="
-                bg-transparent
-                bg-blue
-                text-blue-300
-                font-medium
+                
+                text-black
+                bg-emerald-50
+                px-6
+                py-2
               "
               >
                 Sign Up
@@ -135,7 +136,7 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
                 onClick={() => {}}
                 className="
                 bg-emerald-800            
-                text-blue-300
+                text-black
                 px-6
                 py-2
               "
