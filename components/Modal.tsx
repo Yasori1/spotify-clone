@@ -93,7 +93,7 @@ const Modal: React.FC<ModalProps> = ({
             rounded-full
             focus:outline-none
             ">
-                <IoMdClose />
+                <IoMdClose /> 
             </button>
           </Dialog.Close>
         </Dialog.Content>
