@@ -1,4 +1,5 @@
 "use client";
+
 import { useRouter } from "next/navigation";
 import { twMerge } from "tailwind-merge";
 import { RxCaretLeft, RxCaretRight } from "react-icons/rx";
@@ -132,7 +133,10 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
         >
           {user ? (
             <div className="flex gap-x-4 items-center">
-              <Button onClick={handleLogout} className="bg-emerald-600 text-black px-6 py-2">
+              <Button
+                onClick={handleLogout}
+                className="bg-emerald-600 text-black px-6 py-2"
+              >
                 Logout
               </Button>
               <Button

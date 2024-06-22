@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useEffect, useState } from "react";
 import Modal from "./Modal";
 import {
@@ -15,20 +17,19 @@ const AuthModal = () => {
   const { session } = useSessionContext();
   const { onClose, isOpen } = useAuthModal();
 
-    useEffect(() => {
-      if (session) {
-        router.refresh();
-        router.push("/home");
-        onClose();
-      }
-    }, [session, router, onClose]);
-
+  useEffect(() => {
+    if (session) {
+      router.refresh();
+      router.push("/");
+      onClose();
+    }
+  }, [session, router, onClose]);
 
   const onChange = (open: boolean) => {
     if (!open) {
       onClose();
     }
-  }
+  };
 
   return (
     <Modal

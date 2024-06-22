@@ -1,3 +1,5 @@
+"use client";
+
 import { User } from "@supabase/auth-helpers-nextjs";
 import {
   useSessionContext,
@@ -37,13 +39,15 @@ export const MyUserContextProvider = (props: Props) => {
   const [userDetails, setUserDetails] = useState<UserDetails | null>(null);
   const [subscription, setSubscription] = useState<Subscription | null>(null);
 
-  const getUserDetails = () => supabase.from("users").select("*").single();
+  const getUserDetails = () => supabase.from("users").select("*").limit(1).single();
   const getSubscription = () =>
     supabase
       .from("subscriptions")
       .select("*, prices(*, products(*))")
       .in("status", ["trialing", "active"])
+      .limit(1)
       .single();
+
   useEffect(() => {
     if (user && !isLoadingData && !userDetails && !subscription) {
       setIsLoadingData(true);
