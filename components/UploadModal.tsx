@@ -119,13 +119,13 @@ const UploadModal = () => {
         <Input
           id="title"
           disabled={isLoading}
-          {...(register("title"), { required: true })}
+          {...(register("title", { required: true }))}
           placeholder="Song title"
         />
         <Input
           id="author"
           disabled={isLoading}
-          {...(register("author"), { required: true })}
+          {...(register("author", { required: true }))}
           placeholder="Song author"
         />
         <div>
@@ -135,7 +135,7 @@ const UploadModal = () => {
             type="file"
             disabled={isLoading}
             accept=".mp3"
-            {...(register("Song"), { required: true })}
+            {...(register("song", { required: true }))}
           />
         </div>
         <div>
@@ -145,7 +145,7 @@ const UploadModal = () => {
             type="file"
             disabled={isLoading}
             accept="image/*"
-            {...(register("image"), { required: true })}
+            {...(register("image", { required: true }))}
           />
         </div>
         <Button disabled={isLoading} type="submit">
