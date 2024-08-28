@@ -50,7 +50,6 @@ const ListItem: React.FC<ListItemProps> = ({
     alt="Image"
     width={64} 
     height={64} 
-    bg-grey
 />
 
             </div>
